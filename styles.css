@@ -1,0 +1,240 @@
+/* ---- General Styles ---- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("assets/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ---- Login Container ---- */
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ---- Card Styling ---- */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Heading Styles ---- */
+h2 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 24px;
+}
+
+/* ---- Avatar Image ---- */
+.anime-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto 20px;
+  transition: transform 0.3s;
+}
+
+.anime-img:hover {
+  transform: scale(1.1);
+}
+
+/* ---- Form Input Styling ---- */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #374151;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* ---- Checkbox Styling ---- */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Jarak antara checkbox dan teks */
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.checkbox-container input {
+  width: 18px; /* Ukuran checkbox agar proporsional */
+  height: 18px;
+  accent-color: #2563eb; /* Warna sesuai dengan tema */
+}
+
+.checkbox-container label {
+  display: inline; /* Supaya sejajar dengan checkbox */
+  font-weight: normal; /* Sesuaikan dengan tampilan form lainnya */
+  color: #374151;
+  cursor: pointer;
+  margin-bottom: 0; /* Hindari jarak bawah berlebih */
+  line-height: 18px; /* Sejajar dengan tinggi checkbox */
+}
+
+/* ---- Button Styling ---- */
+.btn {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #2563eb; /* Biru lebih gelap */
+  transform: scale(1.05);
+}
+
+/* ---- Success Message ---- */
+.result-message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #10b981;
+}
+
+/* ---- Overlay Styling ---- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ---- Image Overlay Styling ---- */
+.welcome {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95); /* Mulai dengan ukuran lebih kecil */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Kembali ke ukuran normal */
+  }
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .anime-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .checkbox-container {
+    font-size: 12px;
+  }
+
+  .welcome {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ---- Untuk layar lebih kecil dari 400px ---- */
+@media (max-width: 400px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .anime-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .welcome {
+    width: 150px;
+    height: 150px;
+  }
+}
